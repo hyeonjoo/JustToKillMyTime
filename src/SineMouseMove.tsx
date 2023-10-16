@@ -1,10 +1,10 @@
 import { Mafs, Coordinates, Plot, labelPi, useMovablePoint } from 'mafs'
 
-interface MafsTrialProps {
+interface SineMouseMoveProps {
   isPlotMoving: boolean
 }
 
-const MafsTrial = ({ isPlotMoving }: MafsTrialProps) => {
+const SineMouseMove = ({ isPlotMoving }: SineMouseMoveProps) => {
   const movablePoint = useMovablePoint([0, 0], {
     constrain: ([x, y]) => [x, isPlotMoving ? 0 : Math.sin(x)],
   })
@@ -25,4 +25,4 @@ const MafsTrial = ({ isPlotMoving }: MafsTrialProps) => {
   )
 }
 
-export default MafsTrial
+export default SineMouseMove

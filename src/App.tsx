@@ -1,5 +1,6 @@
 import * as S from './App.styled'
-import MafsTrial from './MafsTrial'
+import SineDance from './SineDance'
+import SineMouseMove from './SineMouseMove'
 import { useState } from 'react'
 // import Lottie from 'lottie-react'
 
@@ -10,7 +11,8 @@ function App() {
       <button onClick={() => setLaiTriggered((prevState) => !prevState)}>
         <img src={'./logo192.png'} alt={'Baby Lai'} />
       </button>
-      <MafsTrial isPlotMoving={isLaiTriggered} />
+      <SineMouseMove isPlotMoving={isLaiTriggered} />
+      <SineDance />
     </S.App>
   )
 }
